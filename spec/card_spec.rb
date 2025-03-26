@@ -15,4 +15,6 @@ RSpec.describe Card do
     expect(card.value).to eq('Queen')
     expect(card.rank).to eq(12)
   end
+
+  
 end
