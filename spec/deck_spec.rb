@@ -38,11 +38,18 @@ RSpec.describe Deck do
     expect(deck.high_ranking_cards).to eq([card1, card3])
   end
 
-  xit '#percent_high_ranking' do
+  it '#percent_high_ranking' do
+    card1 = Card.new(:diamond, 'Queen', 12)
+    card2 = Card.new(:spade, '3', 3)  
+    card3 = Card.new(:heart, 'Ace', 14)  
+    cards = [card1, card2, card3]
 
+    deck = Deck.new(cards)
+
+    expect(deck.percent_high_ranking).to eq(66.67)
   end
 
-  xit '#remove_card' do
+  it '#remove_card' do
 
   end
 
