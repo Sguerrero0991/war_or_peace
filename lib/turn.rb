@@ -16,4 +16,6 @@ class Turn
       :mutually_assured_destruction  #when both players’ rank_of_card_at(0) AND rank_of_card_at(2) are the same.
     end
   end
+
+  
 end
