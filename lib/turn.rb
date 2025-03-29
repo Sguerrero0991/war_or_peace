@@ -36,6 +36,22 @@ class Turn
     #learned I can put an if/else statement within another if/elsif/else statement 
   end
 
+  def pile_cards #cards will be sent from the players’ decks into the @spoils_of_war based on these rules
+    if type == :basic #each player will send one card (the top card) to the spoils pile
+      @spoils_of_war << @player1.deck.cards.first 
+      @spoils_of_war << @player2.deck.cards.first
+      # binding.pry #I'm getting duplicates - why?
+    elsif type == :war #each player will send three cards (the top three cards) to the spoils pile
+      @spoils_of_war << @player1.deck.cards.first(3)
+      @spoils_of_war << @player2.deck.cards.first(3)
+      #still getting duplicates
+    else type == :mutually_assured_destruction 
+      @player1.deck.cards.shift(3)
+      @player2.deck.cards.shift(3)
+      #Each player will remove three cards from play (the top three cards in their deck). These cards are not sent to the spoils pile, they are simply removed from each players’ deck.
+      #check for duplicates 
+    end
+  end
 
   
 end
