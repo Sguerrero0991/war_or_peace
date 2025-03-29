@@ -20,4 +20,11 @@ class Deck
     #learned I could use .count on a method, and that I have to convert a number to_f and then round it to the decimal point I want. In this case (4)
   end
 
+  def remove_card #this method will remove the top card from the deck
+    @cards.shift #this method removes the first element of an array. 
+  end
+
+  def add_card(card) #This method will add one card to the bottom (end) of the deck
+    @cards.push(card) #This method will "push" a card object to the end of an array
+  end
 end   
