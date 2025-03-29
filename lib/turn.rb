@@ -17,5 +17,24 @@ class Turn
     end
   end
 
+  def winner
+    if type == :basic #whichever player has a higher rank_of_card_at(0)
+      if @player1.deck.rank_of_card_at(0) > @player2.deck.rank_of_card_at(0)  
+        return @player1
+      else 
+        return @player2
+      end 
+    elsif type == :war #whichever player has a higher rank_of_card_at(2)
+      if @player1.deck.rank_of_card_at(2) > @player2.deck.rank_of_card_at(2)
+        return @player1
+      else 
+        return @player2
+      end   
+    else type == :mutually_assured_destruction
+      return "No Winner"
+    end
+    #learned I can put an if/else statement within another if/elsif/else statement 
+  end
+
   
 end
