@@ -1,7 +1,9 @@
 require 'rspec'
 require './lib/card'
 require './lib/deck'
+require './lib/player'
 require './lib/turn'
+require 'pry'
 
 RSpec.describe Turn do
   it 'exists' do
@@ -24,5 +26,7 @@ RSpec.describe Turn do
 
     expect(turn.player1).to eq(player1)
     expect(turn.player2).to eq(player2)
+    # binding.pry
   end
+
 end 
