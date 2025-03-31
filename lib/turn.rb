@@ -61,6 +61,4 @@ class Turn
   def award_spoils(winner)
     winner.deck.cards.concat(@spoils_of_war) #this method will add each of the cards in the @spoils_of_war array to the winner
   end   #could I have done this differently with #pile_cards?
-
-  
 end
